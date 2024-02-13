@@ -5,18 +5,15 @@
 <h1> Active Directory: Practical Scenario Simulation </h1>
 
 
-<p>Welcome to the "Active Directory User Creation and Practical Scenario Simulation" project. In this project, we'll create user accounts and simulate various scenarios to enhance our understanding of user provisioning, administration, and problem-solving within Active Directory.</p>
+<p>Welcome to the "Active Directory: Practical Scenario Simulation" project. In this project, we'll simulate various scenarios to enhance our understanding of user provisioning, administration, and problem-solving within Active Directory.</p>
 
 <h2>Prerequisites</h2>
 
 - Building the Foundation: Preliminary Setup for Active Directory and Network Traffic Analysis between Azure VMs
-- Active Directory Deployment and Configuration 
+- Active Directory Deployment and Configuration
+- Active Directory: User Creation
 
 <h2>Key Objectives</h2>
-
-<h4>User Creation</h4>
-
--  Create a number of users using a power shell script in order to populate our domain
 
 <h4>Scenario Simulation</h4>
 
@@ -37,47 +34,7 @@
 - Windows Server 2022
 - Windows 10 (21H2)
 
-<p><strong>.</strong></p>
-<p><strong>.</strong></p>
 
-
-<h1>User Creation</h1>
-
-<h3>&#9312; Run PowerShell script</h3>
-<p>First we will be using a Powershell script to generate a number of users for our Active Directory Domain. 
-</p>
-
-- Login to DC-01 as jane_admin
-- Open PowerShell_ise as an administrator and paste the contents of the <a href="https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1"> script </a> and run it. 
-
-<br>
-
-<img width="821" alt="POWERSHELL" src="https://github.com/kirkgacias/ad-scenario-simulation/assets/158519921/bdc4f2ad-cb4b-4509-83cf-c2c1ec8c4dfd">
-
-<p><strong>The script will generate a number of users with a combination of consonants and vowels so the names might be unusual. </strong> </p>
-
-<p>
-</p>
-<p><strong>.</strong></p>
-<p><strong>.</strong></p>
-<p><strong>.</strong></p>
-
-<p><strong>Once the script is done running, you can verify in Active Directory that the users have been created.</strong></p>
-
-<img width="562" alt="USERS" src="https://github.com/kirkgacias/ad-scenario-simulation/assets/158519921/07b77e8f-07a7-4048-a04b-9d623ddebfc2">
-
-
-<h3>&#9313; Login as user </h3>
-
-- Now you can try logging in as one of the users.
-- Take note of the default password in the script (Password1)
-
-<img width="335" alt="LOGIN" src="https://github.com/kirkgacias/ad-scenario-simulation/assets/158519921/2cedd731-17ff-4595-869b-0111d5bc2f6f">
-
-
-<p><strong>.</strong></p>
-<p><strong>.</strong></p>
-<p><strong>.</strong></p>
 
 <h1>Scenarios</h1>
 
@@ -87,7 +44,7 @@
 
 <p>A new software developer, John Smith, has been hired to join the IT department at your company. As part of the onboarding process, the IT help desk needs to create a new user account for John in Active Directory.</p>
 
-- First create a new user account named "John Smith" with the username "john_smith" and a temporary password.
+<p><strong>First create a new user account named "John Smith" with the username "john_smith" and a temporary password.</strong></p>
 
 <img width="324" alt="john smith" src="https://github.com/kirkgacias/ad-scenario-simulation/assets/158519921/1a695e10-9cb3-4013-bd48-0ed2b9f3c31d">
 
