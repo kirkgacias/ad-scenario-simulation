@@ -5,9 +5,7 @@
 <h1>Active Directory User Creation and Practical Scenario Simulation </h1>
 
 
-<p>Welcome to the "Active Directory User Creation and Practical Scenario Simulation" project. In this project, we'll create user accounts and simulate various scenarios to enhance our understanding of user provisioning, administration, and problem-solving within Active Directory.
-
-</p>
+<p>Welcome to the "Active Directory User Creation and Practical Scenario Simulation" project. In this project, we'll create user accounts and simulate various scenarios to enhance our understanding of user provisioning, administration, and problem-solving within Active Directory.</p>
 
 <h2>Prerequisites</h2>
 
@@ -16,21 +14,21 @@
 
 <h2>Key Objectives</h2>
 
-<h3>User Creation</h3>
+<h4>User Creation</h4>
 
 -  Create a number of users using a power shell script in order to populate our domain
 
 
-<h3>Forest Creation</h3>
+<h4>Forest Creation</h4>
 
 - Establish a new Active Directory forest.
 
-<h3>Scenario Simulation</h3>
+<h4>Scenario Simulation</h4>
 
 - Engage in practical simulations of diverse scenarios, such as password resets, group membership changes, and account deactivations.
 
 
-<h3>Troubleshooting Scenarios</h3>
+<h4>Troubleshooting Scenarios</h4>
 
 - Develop troubleshooting skills by simulating scenarios where users encounter access issues, and learn to identify and resolve these challenges effectively.
 
@@ -45,8 +43,11 @@
 - Windows Server 2022
 - Windows 10 (21H2)
 
+<p><strong>.</strong></p>
+<p><strong>.</strong></p>
 
-<h2>User Creation</h2>
+
+<h1>User Creation</h1>
 
 <h3>&#9312; Run PowerShell script</h3>
 <p>First we will be using a Powershell script to generate a number of users for our Active Directory Domain. 
@@ -54,6 +55,8 @@
 
 - Login to DC-01 as jane_admin
 - Open PowerShell_ise as an administrator and paste the contents of the <a href="https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1"> script </a> and run it. 
+
+<br>
 
 <img width="821" alt="POWERSHELL" src="https://github.com/kirkgacias/ad-scenario-simulation/assets/158519921/bdc4f2ad-cb4b-4509-83cf-c2c1ec8c4dfd">
 
@@ -78,126 +81,233 @@
 <img width="335" alt="LOGIN" src="https://github.com/kirkgacias/ad-scenario-simulation/assets/158519921/2cedd731-17ff-4595-869b-0111d5bc2f6f">
 
 
-
-
 <p><strong>.</strong></p>
 <p><strong>.</strong></p>
 <p><strong>.</strong></p>
 
--  We will now add a new Forest and set the Root domain name to “mydomain.com”
-<p>
-<img width="565" alt="my domain" src="https://github.com/kirkgacias/ad-deployment-configuration/assets/158519921/e4d06e9a-a5a4-4e8b-b464-b90ac041cbc8"> </p>
+<h1>Scenarios</h1>
+
+<h3>&#9312; User Account Creation </h3>
+
+<h4>Background:</h4>
+
+<p>A new software developer, John Smith, has been hired to join the IT department at your company. As part of the onboarding process, the IT help desk needs to create a new user account for John in Active Directory.</p>
+
+- First create a new user account named "John Smith" with the username "john_smith" and a temporary password.
+
+<img width="324" alt="john smith" src="https://github.com/kirkgacias/ad-scenario-simulation/assets/158519921/1a695e10-9cb3-4013-bd48-0ed2b9f3c31d">
+
+<p><strong>NOTE: Set the account to require a password change at the next login.</strong></p>
+
+
+<p><strong>.</strong></p>
+<p><strong>.</strong></p>
+
+<p><strong> Assign John to the "Developers" security group in Active Directory.</strong></p>
+
+<img width="340" alt="developers" src="https://github.com/kirkgacias/ad-scenario-simulation/assets/158519921/a1f6ef6a-5c02-41c5-a331-eddde3b2e0f0">
+
+<p><strong>.</strong></p>
+<p><strong>.</strong></p>
+
+
+<p><strong>Then ensure that John's account is located in the appropriate Organizational Unit (OU) for IT staff.</strong></p>
+
+<img width="340" alt="check" src="https://github.com/kirkgacias/ad-scenario-simulation/assets/158519921/3344b604-0705-45d7-8e22-90fc583bf55a">
+
+<br>
+<br>
+
+- Communicate the login credentials and temporary password to John through a secure channel.
+- Document the date and time of account creation for auditing purposes.
   
-- Finish setup and restart DC-01
-- Log back in with “your username"@mydomain.com
+<h4>Considerations:</h4>
 
+- The temporary password should meet the company's password policy requirements.
+- Ensure that John has the necessary permissions and group memberships to access the resources required for his role.
+
+<h3>&#9313; Password Reset </h3>
+
+<h4>Background:</h4>
+
+<p> Sarah Thompson, a marketing executive, contacts the IT help desk reporting that she has forgotten her password and is unable to access her computer and email. The help desk needs to assist Sarah in resetting her password in Active Directory.</p>
+
+<p><strong> Locate Sarah's user account and initiate a password reset.</strong></p>
+
+<img width="383" alt="reset password" src="https://github.com/kirkgacias/ad-scenario-simulation/assets/158519921/c74f2c28-6fd8-4d3e-b3ed-7e16d14d1364">
 
 
 <p><strong>.</strong></p>
 <p><strong>.</strong></p>
 <p><strong>.</strong></p>
 
-<h3>&#9314; Creating an Admin in Active Directory </h3>
+<p><strong>Set a temporary password for Sarah that complies with the company's password policy.</strong></p>
 
-- Once DC-01 has rebooted, click on tools and select Active Directory Users and Computers
-- Right click on mydomain.com and select new and click on Organizational Unit
-<img width="438" alt="Users" src="https://github.com/kirkgacias/ad-deployment-configuration/assets/158519921/23db8c79-84f4-4e6d-befe-77505518cb05">
+<img width="383" alt="enable acc" src="https://github.com/kirkgacias/ad-scenario-simulation/assets/158519921/85e43120-0d23-4cb8-a8e2-6e64005a7303">
 
+<p><strong>NOTE: Make sure to click the highlighted boxes to ensure the user’s account is unlocked and enable them to set their own password. </strong></p>
+
+- Communicate the temporary password to Sarah through a secure channel and instruct her to change it immediately upon login.
+- Provide guidance on how to change the password using the company's self-service password reset tool if available.
+- Document the date and time of account creation for auditing purposes.
+
+<h4>Considerations:</h4>
+
+- Ensure that the chosen temporary password is strong and complies with the company's password policy.
+- Remind Sarah to update the password on any additional devices or applications where the old password was saved.
+
+<p><strong>.</strong></p>
+<p><strong>.</strong></p>
+
+<h3>&#9314; Group Membership Update </h3>
+
+<h4>Background:</h4>
+
+<p>Emma Rodriguez, a systems analyst, has recently been promoted to a managerial role within the IT department. As part of her new responsibilities, Emma now requires access to specific network resources and project folders. The IT help desk needs to update Emma's group memberships in Active Directory accordingly.</p>
+
+<p><strong>Locate Emma's user account and review her current group memberships.</strong></p>
+
+<img width="304" alt="Emma " src="https://github.com/kirkgacias/ad-scenario-simulation/assets/158519921/e0f15108-dcdb-477d-8de4-5f3747e5ea07">
+
+<p><strong>.</strong></p>
+<p><strong>.</strong></p>
+<p><strong>.</strong></p>
+
+<p><strong>Remove Emma from the "Systems Analysts" group and add her to the "IT Managers" group.</strong></p>
+
+<img width="303" alt="IT managers" src="https://github.com/kirkgacias/ad-scenario-simulation/assets/158519921/5120932a-c9de-45d9-9419-383bf839bbc4">
+
+<p><strong>.</strong></p>
+<p><strong>.</strong></p>
+
+
+<p><strong>Confirm that Emma now has the necessary access rights to project folders and relevant network resources.</strong></p>
+
+<img width="600" alt="image" src="https://github.com/kirkgacias/ad-scenario-simulation/assets/158519921/aadea113-c15b-4135-93d8-8b4ebf48de04">
+
+
+- Communicate the group membership update to Emma, along with any additional instructions or changes in access.
+- Document the whole process
+
+
+<h4>Considerations:</h4>
+
+- Ensure that Emma's new group memberships align with her managerial responsibilities.
+- Communicate the changes to other relevant parties, such as the IT security team, to maintain awareness.
+- Verify that Emma's access permissions are correctly configured after the group membership update.
+
+<h3>&#9315; Account Deactivation </h3>
+
+<h4>Background:</h4>
+
+<p>Mark Johnson, a network administrator, has recently resigned from the company. The IT help desk needs to deactivate Mark's user account in Active Directory to prevent unauthorized access and ensure the security of company resources.</p>
+
+<p><strong>Locate Mark's user account and initiate the account deactivation process.</strong></p>
+
+<img width="421" alt="makr" src="https://github.com/kirkgacias/ad-scenario-simulation/assets/158519921/0a51e96b-9dce-4bf6-a22f-92943f6e8a20">
+
+<p><strong>.</strong></p>
+<p><strong>.</strong></p>
+
+
+<p><strong>Disable Mark's account to prevent further logins while retaining the account details for reference.</strong></p>
+
+<img width="470" alt="disable" src="https://github.com/kirkgacias/ad-scenario-simulation/assets/158519921/da07b6af-1ba3-467a-b0a0-8109afc37bfb">
+
+<p><strong>.</strong></p>
+<p><strong>.</strong></p>
+
+
+<p><strong>You may receive a confirmation dialog; click "Yes" to confirm the disabling of the user account.</strong></p>
+
+<img width="223" alt="disable 2" src="https://github.com/kirkgacias/ad-scenario-simulation/assets/158519921/5b5bdfe6-996d-4ff3-8201-4cd9549bdd46">
+
+<p><strong>.</strong></p>
+<p><strong>.</strong></p>
+<p><strong>.</strong></p>
+
+<p><strong>Remove Mark from all security groups to revoke his access to network resources.</strong></p>
+
+<img width="295" alt="remove mark" src="https://github.com/kirkgacias/ad-scenario-simulation/assets/158519921/1613e604-3e4c-462f-8c30-ea0dd7fed0bf">
 
 <br>
 <br>
-<br>
-<p><strong>.</strong></p>
-<p><strong>.</strong></p>
-<p><strong>.</strong></p>
 
-<p><strong> We will be creating an OU named _EMPLOYEES and _ADMINS </strong></p>
+<p><strong> Confirm with other relevant departments (e.g., HR) that Mark's departure aligns with company policies and document the whole process.</strong></p>
 
-<img width="450" alt="admins" src="https://github.com/kirkgacias/ad-deployment-configuration/assets/158519921/d64f8f3b-130b-4156-bc08-b16f7b21fc89">
+<h4>Considerations:</h4>
 
+- Ensure a smooth transition of Mark's responsibilities to other team members.
 
-<p><strong>.</strong></p>
-<p><strong>.</strong></p>
+-  Communicate the account deactivation to other departments, such as HR and security, for coordinated efforts.
 
-<p><strong>Right click on Users and create a new user named Jane Doe with the username jane_admin</strong></p>
+-  Retain Mark's user account details for historical records and potential future reference.
+   
+-  Conduct a review of Mark's access rights to identify and update any shared resources associated with his account.
 
-<img width="323" alt="jane doe" src="https://github.com/kirkgacias/ad-deployment-configuration/assets/158519921/5d8f782a-145a-404b-bc83-7a6721b3728d">
+<h3>&#9316; Organizational Unit (OU) Management </h3>
 
+<h4>Background:</h4>
 
-<p><strong>.</strong></p>
-<p><strong>.</strong></p>
-<p><strong>.</strong></p>
+<p>The Sales department has recently undergone a reorganization, resulting in the creation of a new team focused on international sales. The IT help desk needs to reflect this change in the Active Directory structure by creating a new Organizational Unit (OU) for the International Sales team and moving relevant user accounts into the new OU.
+</p>
 
-<p><strong>Now we will turn Jane Doe into an admin by right clicking her name and adding her to the “Domain Admins” Security Group</strong></p>
+<p><strong>Create a new Organizational Unit named "International Sales" within the Sales department's organizational structure.</strong></p>
 
-<img width="412" alt="add to group" src="https://github.com/kirkgacias/ad-deployment-configuration/assets/158519921/08175b12-7a59-4030-b5ef-6ef1983ac6e7">
-
-
+<img width="323" alt="International Sales" src="https://github.com/kirkgacias/ad-scenario-simulation/assets/158519921/19db8909-74bf-4e02-8b5d-353bce7818ee">
 
 <p><strong>.</strong></p>
 <p><strong>.</strong></p>
 <p><strong>.</strong></p>
 
-<p><strong>Logout of DC-01 and log back in with Jane Doe’s credentials</strong></p>
+<p><strong>Move the user accounts of team members, such as Alex Turner and Maria Sanchez, to the newly created OU.</strong></p>
 
-<img width="337" alt="jane login" src="https://github.com/kirkgacias/ad-deployment-configuration/assets/158519921/751f9854-2aa5-4f94-b641-b355e77a2a32">
+<img width="307" alt="Alex Turner to IS " src="https://github.com/kirkgacias/ad-scenario-simulation/assets/158519921/ff044b9d-17ee-4b8d-8b40-0f55dff95070">
 
-<p><strong>.</strong></p>
-<p><strong>.</strong></p>
-<p><strong>.</strong></p>
-
-
-<h3>&#9315; Join Client-01 to domain </h3>
-
-<p><strong> For Client-01 to join the domain, we first have to set it’s DNS server as DC-01’s private address.</strong></p>
-
-- In the Azure Portal, select Client-01 -> Networking -> Network interface and click on DNS servers
-
-<img width="735" alt="dns servers" src="https://github.com/kirkgacias/ad-deployment-configuration/assets/158519921/13292c41-67f1-4212-95c4-084ac2ec0751">
-
-
+<img width="305" alt="Maria to IS" src="https://github.com/kirkgacias/ad-scenario-simulation/assets/158519921/641b24cb-156c-4a32-8edd-bc9041ca3741">
 
 <p><strong>.</strong></p>
 <p><strong>.</strong></p>
 <p><strong>.</strong></p>
 
-<p><strong>Select a custom DNS server and type in the private ip address of DC-01 and restart Client-01</strong></p>
+<p><strong> Verify that the users now appear under the "International Sales" OU in Active Directory.
+</strong></p>
 
-<img width="356" alt="dns servers2" src="https://github.com/kirkgacias/ad-deployment-configuration/assets/158519921/d7ec7764-9fcd-4d46-8962-f536bcb1007d">
-
-<p><strong>.</strong></p>
-<p><strong>.</strong></p>
-<p><strong>.</strong></p>
-
-<p><strong> Now log back in to Client-01 using your original admin credentials. Click start and go to Settings > Rename this PC (advanced) > Change and add “mydomain.com” and login with the admin credentials previously created (jane_admin) </strong></p>
-
-<img width="297" alt="remote desktop first login" src="https://github.com/kirkgacias/ad-deployment-configuration/assets/158519921/97df566d-84c9-40d2-88b1-769f79af10a6">
+<img width="296" alt="Verify" src="https://github.com/kirkgacias/ad-scenario-simulation/assets/158519921/8c4884d1-e16a-48a6-a492-6cc12f6e91e8">
 
 <br>
-
-<p> <strong>Once Client-01 has been added, the VM will restart.</strong></p>
-
-
-<p><strong>.</strong></p>
-<p><strong>.</strong></p>
-<p><strong>.</strong></p>
-
-<h3>&#9316; Setup Remote Desktop for non-administrative users </h3>
-
-- Log back into Client-01 using jane_admin and open Settings > Remote Desktop> User Accounts and click “Select users that can remotely access this PC”
-- Add Domain Users
-
 <br>
 
-<img width="343" alt="domain users" src="https://github.com/kirkgacias/ad-deployment-configuration/assets/158519921/04eaffe2-1fa3-4c4c-a327-8ea5b63e2c24">
+<p><strong>Communicate the organizational change to relevant stakeholders, such as department heads and team leaders.
+</strong></p>
 
-<p><strong>This will allow normal users to login to Client-01</strong></p>
+<h4>Considerations:</h4>
 
-<br>
+- Ensure that the new OU structure aligns with the company's organizational hierarchy.
 
-<p><strong>.</strong></p>
-<p><strong>.</strong></p>
-<p><strong>.</strong></p>
+- Confirm that the appropriate Group Policy settings apply to the users within the new OU.
+  
+- Communicate any changes in access permissions or policies resulting from the OU reorganization to the IT security team.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
