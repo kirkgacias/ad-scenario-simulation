@@ -2,7 +2,7 @@
 <img src="https://i.imgur.com/pU5A58S.png" alt="Microsoft Active Directory Logo"/>
 </p>
 
-<h1>Active Directory User Creation and Practical Scenario Simulation </h1>
+<h1> Active Directory: Practical Scenario Simulation </h1>
 
 
 <p>Welcome to the "Active Directory User Creation and Practical Scenario Simulation" project. In this project, we'll create user accounts and simulate various scenarios to enhance our understanding of user provisioning, administration, and problem-solving within Active Directory.</p>
@@ -18,15 +18,9 @@
 
 -  Create a number of users using a power shell script in order to populate our domain
 
-
-<h4>Forest Creation</h4>
-
-- Establish a new Active Directory forest.
-
 <h4>Scenario Simulation</h4>
 
 - Engage in practical simulations of diverse scenarios, such as password resets, group membership changes, and account deactivations.
-
 
 <h4>Troubleshooting Scenarios</h4>
 
@@ -291,30 +285,10 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <h2> Final Thoughts </h2>
 
 <p>
-We've successfully concluded the Active Directory Deployment and Configuration phase. Through configuring Active Directory on the Domain Controller, we established our infrastructure by creating a forest, administrator account, and ultimately integrating Client-01 into the domain. In the upcoming project, we'll be generating users and simulating various Active Directory scenarios. </p>
+In summary, Active Directory is crucial for managing user accounts and network resources. The scenarios provided cover common IT help desk tasks, such as creating user accounts, resetting passwords, updating group memberships, and handling account deactivation. These scenarios serve as practical exercises for training IT personnel and highlight the importance of Active Directory in maintaining a secure and organized digital environment. </p>
 
 
 
