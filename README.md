@@ -53,30 +53,30 @@
 </p>
 
 - Login to DC-01 as jane_admin
-- Open PowerShell_ise as an administrator and paste the contents of the script and run it. 
+- Open PowerShell_ise as an administrator and paste the contents of the <a href="https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1"> script </a> and run it. 
 
-<img width="736" alt="AD-setup" src="https://github.com/kirkgacias/ad-deployment-configuration/assets/158519921/bb534e6b-0072-420a-9f74-c03bbcc77016">
+<img width="821" alt="POWERSHELL" src="https://github.com/kirkgacias/ad-scenario-simulation/assets/158519921/bdc4f2ad-cb4b-4509-83cf-c2c1ec8c4dfd">
 
-<p>
+<p><strong>The script will generate a number of users with a combination of consonants and vowels so the names might be unusual. </strong> </p>
 
-</p>
-<p><strong>.</strong></p>
-<p><strong>.</strong></p>
-<p><strong>.</strong></p>
-
-<p><strong> Select Active Directory Domain Services and finish the installation </strong> </p>
 <p>
 </p>
 <p><strong>.</strong></p>
 <p><strong>.</strong></p>
 <p><strong>.</strong></p>
 
-<h3>&#9313; Promote DC-01 to Domain Controller </h3>
+<p><strong>Once the script is done running, you can verify in Active Directory that the users have been created.</strong></p>
 
-- Once the installation is done, notice the flag on the top left of the Server Manager
-- Click on the flag and promote DC-01 to Domain Controller.
+<img width="562" alt="USERS" src="https://github.com/kirkgacias/ad-scenario-simulation/assets/158519921/07b77e8f-07a7-4048-a04b-9d623ddebfc2">
 
-<img width="242" alt="notif" src="https://github.com/kirkgacias/ad-deployment-configuration/assets/158519921/3cb91456-cc00-4e70-8ea2-2b54a5dc8137">
+
+<h3>&#9313; Login as user </h3>
+
+- Now you can try logging in as one of the users.
+- Take note of the default password in the script (Password1)
+
+<img width="335" alt="LOGIN" src="https://github.com/kirkgacias/ad-scenario-simulation/assets/158519921/2cedd731-17ff-4595-869b-0111d5bc2f6f">
+
 
 
 
